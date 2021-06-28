@@ -1,0 +1,20 @@
+influx:
+  addr: http://47.98.56.172:8086
+  user: MincoX
+  password: mincoroot
+  database: sysMonitor
+  measurement: nginx_log
+  precision: s
+  # LOG_PATH = "./nginx.log"
+  # MONITOR_PORT = 10001
+
+processor:
+  reader_num: 1 # 读取协程的数量
+  resolver_num: 2 # 解析器协程数量
+  writer_num: 4 # 写入器协程数
+  log_path: F:\Program\Language\Golang\src\monitor\logs\nginx.log
+
+http:
+  port: 10003
+  read_timeout: 3
+  write_timeout: 3
